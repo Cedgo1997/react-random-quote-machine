@@ -67,7 +67,8 @@ class App extends React.Component {
             quote: {
                 text: 'Be yourself; everyone else is already taken.',
                 author: 'Oscar Wilde'
-            }
+            },
+            tweetString: 'https://twitter.com/intent/tweet?text=%22Be%20yourself;%20everyone%20else%20is%20already%20taken.%22%20Oscar%20Wilde'
         }
 
         this.changeQuote = this.changeQuote.bind(this);
@@ -82,6 +83,14 @@ class App extends React.Component {
             }
         }));
         color = random_rgba();
+        this.urlString();
+    }
+
+    urlString = () => {
+        this.setState({
+            // eslint-disable-next-line no-useless-concat
+            tweetString: "https://twitter.com/intent/tweet?text=$" + "%22" + this.state.quote.text.split(' ').join('%20') + '%20' + this.state.quote.author.split(' ').join('%20') + "%22"
+        });
     }
 
     render() {
@@ -91,7 +100,7 @@ class App extends React.Component {
                 <h2 id="text"><i className="fa fa-quote-left fa-2x"></i> {this.state.quote.text}</h2>
                 <p id="author">- {this.state.quote.author}</p>
                 <div id="buttons">
-                <a target="_blank" type="button" href="twitter.com/intent/tweet" id="tweet-quote" style={{color:color}}><i className="fa fa-twitter"></i></a>
+                <a target="_blank" type="button" href={this.state.tweetString}  id="tweet-quote" style={{color:color}} rel="noreferrer"><i className="fa fa-twitter"></i></a>
                 <button onClick={this.changeQuote} id="new-quote" style={{color:color}}>New Quote</button>
                 </div>
             </div>
