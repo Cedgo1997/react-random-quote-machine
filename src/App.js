@@ -89,12 +89,13 @@ class App extends React.Component {
         <div id="background" style={{color: color, background: color, height: '100%'}}>        
             <div id="quote-box" style = {{background: 'white'}}>
                 <h2 id="text"><i className="fa fa-quote-left fa-2x"></i> {this.state.quote.text}</h2>
-                <p id="author">{this.state.quote.author}</p>
+                <p id="author">- {this.state.quote.author}</p>
                 <div id="buttons">
-                <button id="tweet-quote" style={{color:color}}><i className="fa fa-twitter"></i></button>
+                <a target="_blank" type="button" href="twitter.com/intent/tweet" id="tweet-quote" style={{color:color}}><i className="fa fa-twitter"></i></a>
                 <button onClick={this.changeQuote} id="new-quote" style={{color:color}}>New Quote</button>
                 </div>
             </div>
+            <a href="https://github.com/Cedgo1997" style={{color:"white", textAlign: 'center'}}>Made by César González</a>
          </div>
         )
     }
