@@ -95,7 +95,7 @@ class App extends React.Component {
                 <button onClick={this.changeQuote} id="new-quote" style={{color:color}}>New Quote</button>
                 </div>
             </div>
-            <a href="https://github.com/Cedgo1997" style={{color:"white", textAlign: 'center'}}>Made by César González</a>
+            <a href="https://github.com/Cedgo1997" style={{color:"white", textAlign: 'center'}}>Made by César González <i className="fa fa-github"></i></a>
          </div>
         )
     }
