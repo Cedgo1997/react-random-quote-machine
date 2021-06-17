@@ -9,8 +9,15 @@
     display: grid;
     min-height: 200px;
     max-height: 400px;
-    width: 640px;
+    max-width: 640px;
     padding: 15px;
+    margin: 15px;
+    box-shadow: 
+      12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+      -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 #text {
@@ -28,7 +35,7 @@
     justify-content: space-between;
 }
 
-button {
+button, #tweet-quote {
     box-shadow: 
       12px 12px 16px 0 rgba(0, 0, 0, 0.25),
       -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
@@ -37,9 +44,18 @@ button {
     border: none;
     height: 40px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 #tweet-quote {
     width: 40px;
-    font-size: 18px;
+    font-size: 25px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
