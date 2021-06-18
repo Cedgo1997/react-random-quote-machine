@@ -65,13 +65,17 @@ class App extends React.Component {
                 }
             ],
             quote: {
-                text: 'Be yourself; everyone else is already taken.',
-                author: 'Oscar Wilde'
+                text: '',
+                author: ''
             },
-            tweetString: 'https://twitter.com/intent/tweet?text=%22Be%20yourself;%20everyone%20else%20is%20already%20taken.%22%20Oscar%20Wilde'
+            tweetString: ''
         }
 
         this.changeQuote = this.changeQuote.bind(this);
+    }
+
+    componentDidMount() {
+        this.changeQuote();
     }
 
     changeQuote = () => {
